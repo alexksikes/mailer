@@ -9,6 +9,9 @@ from app.models import recipients
 import re
 
 def send(to_tpl, subject_tpl, message_tpl, sql_query='', reply_to=''):
+    # demo version, no email sent.
+    return 0
+
     headers = dict(Bcc=config.mail_bcc)
     if reply_to: headers['Reply-To'] = reply_to
 

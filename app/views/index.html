@@ -15,6 +15,7 @@ $def with (form)
     
     <label for="sql_query">Select a list of recipients from a SQL query:</label>
     <label class="help" for="sql_query">Make sure user only has select rights! Your email could be sent to all these recipients so watch out. Does not work with limit and offset.</label>
+    <label class="help" for="sql_query" style="color: red;">For this demo try: <strong>select * from demo_applicants</strong></label>
     <textarea name="sql_query" id="sql_query"></textarea>
     <button name="submit" type="button" onclick="preview_recipients()">Preview Recipients</button>
     
