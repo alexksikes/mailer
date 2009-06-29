@@ -1,0 +1,14 @@
+IMPLEMENT:
+
+- keep a list of message / email address in order to avoid resending to the same email (unless force is checked)
+- send a copy to ...
+
+MORE IDEAS:
+
+- have recipient lists which are SQL queries.
+>> recipients creation should be part of another panel (more advanced one).
+>> templates are connected to recipients (variables being used) so it might not be a good idea to disociate the two.
+
+- have an export data as CSV option.
+- need to be able to save templates.
+- need to keep rack of exactly which email was sent and to whom.

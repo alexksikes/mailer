@@ -1,0 +1,25 @@
+$def with (form)
+
+<form method="post" action="/send">
+
+<div id="template">
+    <h2>Write your template:</h2>
+    
+    <div id="sendmail_form">
+    $:form
+    </div>
+</div>
+
+<div id="recipients">
+    <h2>Choose your recipients:</h2>
+    
+    <label for="sql_query">Select a list of recipients from a SQL query:</label>
+    <label class="help" for="sql_query">Make sure user only has select rights! Your email could be sent to all these recipients so watch out. Does not work with limit and offset.</label>
+    <textarea name="sql_query" id="sql_query"></textarea>
+    <button name="submit" type="button" onclick="preview_recipients()">Preview Recipients</button>
+    
+    <div id="recipients_preview">
+    </div>
+</div>
+
+</form>

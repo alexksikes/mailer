@@ -1,0 +1,50 @@
+$def with (results, columns, pager, inputs)
+
+$def show_paging():
+    $if pager.leftmost_a or pager.leftmost_a == 0:
+        <a href="javascript:ajax_load('/recipients?$url_encode(inputs, start=pager.leftmost_a)')"><< First</a>
+    $if pager.left_a or pager.left_a == 0:
+        <a href="javascript:ajax_load('/recipients?$url_encode(inputs, start=pager.left_a)')">< Prev</a>
+    $(pager.start + 1) - 
+    $if pager.right_a: 
+        $pager.right_a
+    $else:
+        $pager.max_results 
+    of $pager.max_results
+    $if pager.right_a:
+        <a href="javascript:ajax_load('/recipients?$url_encode(inputs, start=pager.right_a)')">Next ></a>
+    $if pager.rightmost_a:
+        <a href="javascript:ajax_load('/recipients?$url_encode(inputs, start=pager.rightmost_a)')">Last >></a>
+
+$def show_table_header():
+    <tr>
+	$for column in columns:
+        <th>\$$column</th>
+    </tr>
+
+<p class="label">Variables you may now use in your template:</p>
+<label class="help">You can use any of these variables in your template.</label>
+<div class="template_variables">
+$for column in columns:
+    <span>\$$column</span>
+</div>
+
+<p class="preview_title label">Your email will be sent to everyone on this list:</p>
+<div class="paging">
+    $:show_paging()
+</div>
+
+<div class="recipients_table"> 
+<table>
+$:show_table_header()
+$for row in results:
+    <tr>
+    $#$for value in row.values():
+    $for value in row:
+        <td>
+        $if value: $value
+        $else: -
+        </td>
+    </tr>
+</table>
+</div>

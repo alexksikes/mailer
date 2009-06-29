@@ -1,0 +1,225 @@
+/* defaults */
+body, h3, ul, li, form {
+	margin: 0px;
+	padding: 0px;
+}
+
+body, form {
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+a {
+    color : #0000CC;
+}
+
+a img {
+	border: 0pt;
+}
+
+strong.wrong {
+    color: red;
+    float: right;
+}
+
+div.wrong input, div.wrong textarea {
+    background: #FFDFDF;
+}
+
+.success {
+    background-color: #FFD37F;
+    text-align: center;
+    padding: 5px;   
+    -moz-border-radius: 5px;
+    font-weight: bold;
+/*    margin-bottom: 10px;*/
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 235px;
+}
+
+a.animated {
+    text-decoration: none;
+}
+
+a.animated:hover {
+    text-decoration: underline;
+}
+/* defaults */
+
+/* forms defaults */
+form label, .label {
+    color: #0066CC;
+    display: block;
+    margin: 3px 0px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form label.help {
+    color: #7F7F7F;
+    font-weight: normal;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+}
+
+#sendmail_form div {
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 350px;
+}
+/* forms defaults */
+
+/* html table */
+table {
+    /* IE need to apply at the table level */
+    empty-cells : show;
+    border-collapse : collapse;
+	width: 100%;
+    /*table-layout: fixed;*/
+}
+
+td, th {
+/*    width: 100%; */
+    font-size : 90%;
+    white-space : nowrap;
+/*    padding-right: 10px;
+	max-width: 185px;*/
+    overflow: hidden;
+}
+
+th {
+    font-weight: normal;
+    background-color: #EFEFEF;
+    text-align: left;
+}
+/* html table */
+
+/* sql query */
+#sql_query {
+    height: 50px;
+}
+
+#test_sql_query {
+/*    position: absolute;
+    right: 0px;
+    top: 5px;*/
+    float: right;
+    font-weight: bold;
+    font-size: 90%;
+}
+/* sql query */
+
+.content {
+    padding: 15px;
+    overflow: auto;
+}
+
+.fixed_input {
+    border: 2px solid gray;
+    padding: 3px;
+    margin-bottom: 15px;
+}
+
+#recipients .template_variables {
+    border: 2px dotted gray;
+    padding: 5px;
+    margin-bottom: 15px;
+    -moz-border-radius: 5px;
+    font-weight: bold;
+}
+
+#template {
+    float: left;
+    /*width: 400px;*/
+    width: 30%;
+    margin-right: 2%;
+}
+
+#recipients {
+    /*position: absolute;
+    margin-left: 420px;
+    padding: 0px 15px;*/
+    padding-left: 2%;
+    border-left: 2px dotted grey;
+    width: 65%;
+    float: left;
+}
+
+#recipients .paging {
+    float: right;
+    padding: 2px;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+#recipients table td, #recipients table th {
+    border-bottom : 1px dotted;
+    padding-top: 3px;
+    padding-right: 10px;
+}
+
+#recipients .preview_title {
+    float: left;
+    margin: 0px;
+}
+
+#recipients .recipients_table {
+    clear: both;
+    overflow: scroll;
+}
+
+.sending {
+    width: 90px;
+    padding: 3px;
+    background: url(/img/loading.gif) no-repeat right;
+}
+
+/* checkboxes */
+form #send_copy, form #force_resend {
+    width: 15px;
+    margin: 0px 3px 0px 0px;
+}
+/* checkboxes */
+
+#recipients button {
+    margin: 15px 0px;
+}
+
+/* top menu */
+.topmenu {
+    border-bottom: 1px solid #C0C0C0;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.topmenu ul {
+    font-size: 12px;
+    margin: -2px 3px 0;
+    position: absolute;
+    right: 0;
+    top: 3px;
+}
+
+.topmenu li {
+    border-right: 1px solid #C0C0C0;
+    display: inline;
+    padding:0px 10px;
+}
+
+.topmenu li.last {
+    ul.extlinks li.last {defaults.css (line 133)
+    border:medium none;
+    padding-right:0;
+}
+/* top menu */
