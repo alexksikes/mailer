@@ -193,6 +193,15 @@ form #send_copy, form #force_resend {
     margin: 15px 0px;
 }
 
+/* demo */
+.demo {
+    padding: 5px;
+    background: #FFDFDF;
+    margin: 10px -3px 10px 0px;
+    -moz-border-radius: 5px;
+}
+/* demo */
+
 /* top menu */
 .topmenu {
     border-bottom: 1px solid #C0C0C0;
@@ -202,7 +211,7 @@ form #send_copy, form #force_resend {
     position: relative;
     z-index: 2;
 }
-
+ 
 .topmenu ul {
     font-size: 12px;
     margin: -2px 3px 0;
@@ -210,16 +219,15 @@ form #send_copy, form #force_resend {
     right: 0;
     top: 3px;
 }
-
+ 
 .topmenu li {
     border-right: 1px solid #C0C0C0;
     display: inline;
     padding:0px 10px;
 }
-
+ 
 .topmenu li.last {
-    ul.extlinks li.last {defaults.css (line 133)
-    border:medium none;
+    border: medium none;
     padding-right:0;
 }
 /* top menu */
