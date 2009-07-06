@@ -8,10 +8,12 @@ from app.models import recipients
 
 import re
 
-def send(to_tpl, subject_tpl, message_tpl, sql_query='', reply_to=''):
+def send(to_tpl, subject_tpl, message_tpl, sql_query='', reply_to='', send_copy=False):
     headers = dict(Bcc=config.mail_bcc)
+    if not send_copy:
+        headers = {}
     if reply_to: headers['Reply-To'] = reply_to
-
+    
     count = 1
     if not sql_query:
         web.sendmail(config.mail_sender, to_tpl, subject_tpl, message_tpl, headers=headers)

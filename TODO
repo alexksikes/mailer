@@ -2,6 +2,7 @@ IMPLEMENT:
 
 - keep a list of message / email address in order to avoid resending to the same email (unless force is checked)
 - send a copy to ...
+- demo mode should be a switch in config.py
 
 MORE IDEAS:
 

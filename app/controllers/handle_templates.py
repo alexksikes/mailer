@@ -43,5 +43,5 @@ class send:
         count = 0
         if f.validates():
             d = f.d; d.sql_query =  web.input().sql_query
-            count = templates.send(d.to, d.subject, d.message, d.sql_query, d.reply_to)
+            count = templates.send(d.to, d.subject, d.message, d.sql_query, d.reply_to, d.send_copy)
         return view.sendmail_form(f, success=f.valid, count=count)
