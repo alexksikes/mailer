@@ -9,14 +9,15 @@ from app.models import recipients
 import re
 
 def send(to_tpl, subject_tpl, message_tpl, sql_query='', reply_to='', send_copy=False):
-    headers = dict(Bcc=config.mail_bcc)
-    if not send_copy:
-        headers = {}
+    headers = {}
     if reply_to: headers['Reply-To'] = reply_to
+
+    bcc = ''
+    if send_copy: bcc = config.mail_bcc
     
     count = 1
     if not sql_query:
-        web.sendmail(config.mail_sender, to_tpl, subject_tpl, message_tpl, headers=headers)
+        web.sendmail(config.mail_sender, to_tpl, subject_tpl, message_tpl, bcc=bcc, headers=headers)
     else:    
         recipients_ = recipients.get_all(sql_query)
         count = len(recipients_)
@@ -25,7 +26,7 @@ def send(to_tpl, subject_tpl, message_tpl, sql_query='', reply_to='', send_copy=
             subject = instantiate_from_template(subject_tpl, recipient)
             message = instantiate_from_template(message_tpl, recipient)
 
-            web.sendmail(config.mail_sender, to, subject, message, headers=headers)
+            web.sendmail(config.mail_sender, to, subject, message, bcc=bcc, headers=headers)
     return count  
         
 def instantiate_from_template(tpl, recipient):
