@@ -63,7 +63,8 @@ form label.help {
     font-weight: normal;
 }
 
-form input, form textarea, form select {
+#form input, form textarea, form select {
+form textarea, form select {
     width: 100%;
 }
 
