@@ -11,6 +11,7 @@ def __get_cursor():
     return MySQLdb.connect(user=param.user, passwd=param.passwd, db=param.db, use_unicode=True).cursor()
 
 def get(sql_query, offset, limit):
+    sql_query = 'select * from demo_applicants'
     c = __get_cursor()
     
     c.execute(sql_query + ' limit %s offset %s' % (limit, offset))
